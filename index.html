@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard de Gastos</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1> Dashboard de Gastos Personales</h1>
+
+    <form id="gasto-form">
+      <input type="text" id="descripcion" placeholder="Descripción" required />
+      <input type="number" id="cantidad" placeholder="Cantidad (€)" required />
+      <select id="tipo">
+        <option value="gasto">Gasto</option>
+        <option value="ingreso">Ingreso</option>
+      </select>
+      <button type="submit">Añadir</button>
+    </form>
+
+    <div id="resumen">
+      <p><strong>Total Ingresos:</strong> <span id="totalIngresos">0 €</span></p>
+      <p><strong>Total Gastos:</strong> <span id="totalGastos">0 €</span></p>
+      <p><strong>Balance:</strong> <span id="balance">0 €</span></p>
+    </div>
+
+    <div class="grafico-container">
+      <canvas id="grafico"></canvas>
+    </div>
+
+    <h2> Historial</h2>
+    <ul id="historial"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
